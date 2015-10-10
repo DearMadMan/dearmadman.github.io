@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>laravel 5.1 events | dearmadman-王奇的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今天研究了一下laravel的事件驱动，发现使用起来非常方便，来来~一起嗨起来~.这里只介绍一些简单的使用方法~  队列驱动以及广播分发以后使用到了再研究
+Laravel Events简介laravel的events提供了一些简单的观察者类实践,允许我们注册一些事件，并且允许我们注册一些事件监听者去监听这些事件，当我们触发某些事件时，相应的监听者将会触发handle方法。在这里我们可以处理一些相应">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 5.1 events">
+<meta property="og:url" content="http://dearmadman.com/2015/08/12/laravel-5-event/index.html">
+<meta property="og:site_name" content="dearmadman-王奇的博客">
+<meta property="og:description" content="今天研究了一下laravel的事件驱动，发现使用起来非常方便，来来~一起嗨起来~.这里只介绍一些简单的使用方法~  队列驱动以及广播分发以后使用到了再研究
+Laravel Events简介laravel的events提供了一些简单的观察者类实践,允许我们注册一些事件，并且允许我们注册一些事件监听者去监听这些事件，当我们触发某些事件时，相应的监听者将会触发handle方法。在这里我们可以处理一些相应">
+<meta property="og:image" content="http://dearmadman.com/images/dj.jpeg">
+<meta property="og:updated_time" content="2015-09-03T06:18:44.422Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="laravel 5.1 events">
+<meta name="twitter:description" content="今天研究了一下laravel的事件驱动，发现使用起来非常方便，来来~一起嗨起来~.这里只介绍一些简单的使用方法~  队列驱动以及广播分发以后使用到了再研究
+Laravel Events简介laravel的events提供了一些简单的观察者类实践,允许我们注册一些事件，并且允许我们注册一些事件监听者去监听这些事件，当我们触发某些事件时，相应的监听者将会触发handle方法。在这里我们可以处理一些相应">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  
+  
+    <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
+  
+  
+
+
+  
+
+  
+    <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div class="container">
+      <div class="container-inner">
+        <div id="header-title">
+          <h1 class="logo-wrap">
+            <a href="/" class="logo"></a>
+          </h1>
+          
+            <h2 class="subtitle-wrap">
+              <p class="subtitle">Beautiful work by passionate people.</p>
+            </h2>
+          
+        </div>
+        <div id="header-inner" class="nav-container">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <div class="nav-container-inner">
+            <ul id="main-nav">
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">Home</a></li>
+              
+                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/">javascript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/nodejs/">nodejs</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/laravel/">laravel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/">linux</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/ubuntu/">ubuntu</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/">other</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/css/">css</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/php/">php</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ubuntu/">ubuntu</a></li></ul>
+                  
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="https://github.com/dearmadman">github</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about">About</a></li>
+              
+            </ul>
+            <nav id="sub-nav">
+              <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://dearmadman.com"></form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <div class="main-body container-inner">
+        <div class="main-body-inner">
+          <section id="main">
+            <div class="main-body-header">
+
+              <h1 class="header"><a class="page-title-link" href="/categories/laravel/">laravel</a></h1>
+            </div>
+            <div class="main-body-content">
+              
+  <article id="post-laravel-5-event" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      laravel 5.1 events
+    </h1>
+  
+
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/08/12/laravel-5-event/" class="article-date">
+  <time datetime="2015-08-11T22:08:33.000Z" itemprop="datePublished">2015-08-12</time>
+</a>
+      </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="/images/dj.jpeg" alt="laravel"><br>今天研究了一下laravel的事件驱动，发现使用起来非常方便，来来~一起嗨起来~.<br>这里只介绍一些简单的使用方法~  队列驱动以及广播分发以后使用到了再研究</p>
+<h1 id="Laravel_Events">Laravel Events</h1><h2 id="简介">简介</h2><p>laravel的events提供了一些简单的观察者类实践,允许我们注册一些事件，并且允许我们注册一些事件监听者去监听这些事件，<br>当我们触发某些事件时，相应的监听者将会触发handle方法。在这里我们可以处理一些相应的业务逻辑。</p>
+<h2 id="注册">注册</h2><p>laravel 提供了便利的生成<code>事件注册</code>与<code>事件监听者注册</code>的机制,允许我们通过<code>EventServiceProvider</code>类中以键值对的形式注册<code>事件</code>及<code>事件监听者</code>:<br>    <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * The event listener mappings for the application.</span><br><span class="line"> *</span><br><span class="line"> * <span class="doctag">@var</span> array</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">protected</span> <span class="variable">$listen</span> = [</span><br><span class="line">    <span class="string">'App\Events\UserLoginEvent'</span> =&gt; [</span><br><span class="line">        <span class="string">'App\Listeners\UserLoginEventListener'</span>, </span><br><span class="line">    ],</span><br><span class="line">    <span class="string">'App\Events\ManagerCreateEvent'</span>=&gt;[</span><br><span class="line">        <span class="string">'App\Listeners\ManagerCreateEventListener'</span>,</span><br><span class="line">        <span class="string">'App\Listeners\SomeOtherEventListener'</span>,</span><br><span class="line">    ]</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<p>上面的代码注册了名为<code>UserLoginEvent</code>的事件及名为<code>UserLoginEventListener</code>的<code>UserLoginEvent</code>事件监听者,<code>ManagerCreateEvent</code>事件，监听<code>ManagerCreateEvent</code>事件的两个监听者：<code>ManagerCreateEventListener</code> And <code>SomeOtherEventListener</code><br>ok，这样我们就已经完成了基本的事件及监听者的注册，但是还没有对类进行开发，让我们来通过强大的artisan 进行生成：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan event:generate</span><br></pre></td></tr></table></figure></p>
+<p>通过命令会生成相应已注册的类到相应的文件中，Event会生成在<code>App\Events</code>目录中，Listener会生成在<code>App\Listeners</code>中<br>这样会发现如下的目录结构信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">app\</span><br><span class="line">	Events\</span><br><span class="line">			UserLoginEvent.php</span><br><span class="line">			ManagerCreateEvent.php</span><br><span class="line">	Listeners\</span><br><span class="line">			ManagerCreateEventListener.php</span><br><span class="line">			SomeOtherEventListener.php  <span class="comment"># 比如邮件推送</span></span><br></pre></td></tr></table></figure></p>
+<p>在生成的事件类中，我们可以在<code>__constrcut</code>构造函数中注入相应的依赖，也可以在其中做一些业务处理，当触发事件类时，即<code>__constrct</code>完成后，相应的监听者将会按顺序的触发handle函数 </p>
+<h2 id="触发">触发</h2><p>触发事件的方法很简单，在你需要触发相应事件的地方进行触发操作就行了<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Event::fire(<span class="keyword">new</span> ManagerCreateEvent(<span class="variable">$manager</span>));</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">event(<span class="keyword">new</span> ManagerCreateEvent(<span class="variable">$manager</span>));</span><br></pre></td></tr></table></figure></p>
+<p>事件触发的顺序是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ManagerCreateEvent: __construct</span><br><span class="line">ManagerCreateEventListener: handle</span><br><span class="line">SomeOtherEventListener: handle</span><br></pre></td></tr></table></figure></p>
+<p>这个过程中是可以终止监听的 比如说 在<code>managerCreateEventListener</code>的<code>handle</code>方法中 <code>return false ;</code> 下序的<code>SomeOtherEventListener</code>将不再触发监听操作。</p>
+<h3 id="Subscribe_关注/订阅_事件">Subscribe 关注/订阅 事件</h3><p>laravel的Subscribe机制允许我们在事件监听者自身类中监听多个事件，只要我们在监听者类中实现了subscribe方法,例如：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserEventHandler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 处理用户登录事件。</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onUserLogin</span><span class="params">(<span class="variable">$event</span>)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 处理用户注销事件。</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onUserLogout</span><span class="params">(<span class="variable">$event</span>)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 注册监听器给订阅者。</span><br><span class="line">     *</span><br><span class="line">     * <span class="doctag">@param</span>  Illuminate\Events\Dispatcher  $events</span><br><span class="line">     * <span class="doctag">@return</span> array</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">subscribe</span><span class="params">(<span class="variable">$events</span>)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="variable">$events</span>-&gt;listen(<span class="string">'App\Events\UserLoggedIn'</span>, <span class="string">'UserEventHandler@onUserLogin'</span>);</span><br><span class="line"></span><br><span class="line">        <span class="variable">$events</span>-&gt;listen(<span class="string">'App\Events\UserLoggedOut'</span>, <span class="string">'UserEventHandler@onUserLogout'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面的<code>UserEventHandle</code>类监听了两个不同的事件类<code>UserLoggedIn</code>和<code>UserLoggedOut</code>,当触发UserLoggendIn或者UserLoggedOut时，会自动触发相应的监听方法。</p>
+<p>只定义类和监听方法还是不行的，我们需要告诉系统我们需要注册subscribe形式的监听,在<code>EventServiceProvider</code>中添加：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="variable">$subscribe</span> = [</span><br><span class="line">        <span class="string">'App\Handlers\Events\UserEventHandler'</span>,</span><br><span class="line">    ];</span><br></pre></td></tr></table></figure>
+<p>执行顺序，laravel会优先执行Listen中的事件监听者，而后执行subscribe方式的监听者</p>
+<p>^_^ </p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://dearmadman.com/2015/08/12/laravel-5-event/" data-id="cifkdyo9l001pezd11454t7qk" class="article-share-link">Share</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li></ul>
+
+      </footer>
+    </div>
+  </article>
+  
+
+            </div>
+          </section>
+          <aside id="sidebar">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+  <div class="sidebar-top">
+    <p>code monkey or code artisan</p>
+   <!-- <ul class="social-links">
+      
+        <li><a class="social-tooltip" title="github" href="https://github.com/dearmadman" target="_blank"><i id="icon-github" class="icon"></i></a></li>
+      
+    </ul> -->
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/14/laravel-model-s-fillable-and-guarded/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          laravel model&#39;s fillable and guarded
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/2015/07/15/other/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">linux 手动安装 lnmp 环境</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
+  
+  <div class="widgets-container">
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/09/flexbox/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s21.jpg
+)" alt="flexbox" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/10/09/flexbox/" class="title">flexbox</a></p>
+              <p class="item-date"><time datetime="2015-10-09T06:47:53.000Z" itemprop="datePublished">2015-10-09</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/21/ajax-long-poll-sockets/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s20.jpg
+)" alt="ajax long poll sockets" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2015/09/21/ajax-long-poll-sockets/" class="title">ajax long poll sockets</a></p>
+              <p class="item-date"><time datetime="2015-09-21T03:32:53.000Z" itemprop="datePublished">2015-09-21</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/19/run-ngrok-on-your-own-server/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s19.jpg
+)" alt="run ngrok on your own server" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
+              <p class="item-title"><a href="/2015/09/19/run-ngrok-on-your-own-server/" class="title">run ngrok on your own server</a></p>
+              <p class="item-date"><time datetime="2015-09-19T08:28:48.000Z" itemprop="datePublished">2015-09-19</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/16/margin-top-meger/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s18.jpg
+)" alt="css盒模型 垂直方向magin合并问题" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a><i class="icon" id="icon-angle-right"></i><a class="article-category-link" href="/categories/other/css/">css</a></p>
+              <p class="item-title"><a href="/2015/09/16/margin-top-meger/" class="title">css盒模型 垂直方向magin合并问题</a></p>
+              <p class="item-date"><time datetime="2015-09-16T06:05:38.000Z" itemprop="datePublished">2015-09-16</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/15/design-tools/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s17.jpg
+)" alt="design tools" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/09/15/design-tools/" class="title">design tools</a></p>
+              <p class="item-date"><time datetime="2015-09-15T04:00:28.000Z" itemprop="datePublished">2015-09-15</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/nodejs/">nodejs</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/laravel/">laravel</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/ubuntu/">ubuntu</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/other/css/">css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/centOs/">centOs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lnmp/">lnmp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpStorm/">phpStorm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polipo/">polipo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-float">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/centOs/" style="font-size: 10px;">centOs</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gulp/" style="font-size: 12.5px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/lnmp/" style="font-size: 12.5px;">lnmp</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/phpStorm/" style="font-size: 10px;">phpStorm</a> <a href="/tags/polipo/" style="font-size: 10px;">polipo</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://icodeit.org">icodeit</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  
+  <div class="container">
+    <div class="container-inner">
+      <a id="back-to-top" href="javascript:;"><i class="icon" id="icon-angle-up"></i></a>
+      <div class="credit">
+        <h1 class="logo-wrap">
+          <a href="/" class="logo"></a>
+        </h1>
+        <p>&copy; 2015 wang</p>
+        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
+  <script src="/scrollLoading/main.js" type="text/javascript"></script>
+
+
+<script src="/js/html-patch.js" type="text/javascript"></script>
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

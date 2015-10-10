@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux 手动安装 lnmp 环境 | dearmadman-王奇的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="linux 环境手动进行 nginx mysql php 环境配置
+Nginx依赖项：
+gcc 
+gcc-c++ 
+pcre 
+pcre-devel
+zlib-devel
+openssl
+openssl-devel
+
+1sudo yum install -y gcc gcc-c++ pcre pcre-devel zlib-devel openssl openssl-devel
+下载 &amp;amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux 手动安装 lnmp 环境">
+<meta property="og:url" content="http://dearmadman.com/2015/07/15/other/index.html">
+<meta property="og:site_name" content="dearmadman-王奇的博客">
+<meta property="og:description" content="linux 环境手动进行 nginx mysql php 环境配置
+Nginx依赖项：
+gcc 
+gcc-c++ 
+pcre 
+pcre-devel
+zlib-devel
+openssl
+openssl-devel
+
+1sudo yum install -y gcc gcc-c++ pcre pcre-devel zlib-devel openssl openssl-devel
+下载 &amp;amp;">
+<meta property="og:image" content="http://dearmadman.com/images/shoes.jpg">
+<meta property="og:updated_time" content="2015-09-28T09:34:03.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux 手动安装 lnmp 环境">
+<meta name="twitter:description" content="linux 环境手动进行 nginx mysql php 环境配置
+Nginx依赖项：
+gcc 
+gcc-c++ 
+pcre 
+pcre-devel
+zlib-devel
+openssl
+openssl-devel
+
+1sudo yum install -y gcc gcc-c++ pcre pcre-devel zlib-devel openssl openssl-devel
+下载 &amp;amp;">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  
+  
+    <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
+  
+  
+
+
+  
+
+  
+    <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div class="container">
+      <div class="container-inner">
+        <div id="header-title">
+          <h1 class="logo-wrap">
+            <a href="/" class="logo"></a>
+          </h1>
+          
+            <h2 class="subtitle-wrap">
+              <p class="subtitle">Beautiful work by passionate people.</p>
+            </h2>
+          
+        </div>
+        <div id="header-inner" class="nav-container">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <div class="nav-container-inner">
+            <ul id="main-nav">
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">Home</a></li>
+              
+                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/">javascript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/nodejs/">nodejs</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/laravel/">laravel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/">linux</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/ubuntu/">ubuntu</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/">other</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/css/">css</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/php/">php</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ubuntu/">ubuntu</a></li></ul>
+                  
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="https://github.com/dearmadman">github</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about">About</a></li>
+              
+            </ul>
+            <nav id="sub-nav">
+              <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://dearmadman.com"></form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <div class="main-body container-inner">
+        <div class="main-body-inner">
+          <section id="main">
+            <div class="main-body-header">
+
+              <h1 class="header"><a class="page-title-link" href="/categories/linux/">linux</a></h1>
+            </div>
+            <div class="main-body-content">
+              
+  <article id="post-other" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      linux 手动安装 lnmp 环境
+    </h1>
+  
+
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/07/15/other/" class="article-date">
+  <time datetime="2015-07-15T09:44:31.000Z" itemprop="datePublished">2015-07-15</time>
+</a>
+      </p>
+      <div class="article-entry" itemprop="articleBody">
+        <h1 id="linux_环境手动进行_nginx_mysql_php_环境配置">linux 环境手动进行 nginx mysql php 环境配置</h1><p><img src="/images/shoes.jpg" alt="shoes"></p>
+<h3 id="Nginx">Nginx</h3><h6 id="依赖项：">依赖项：</h6><ul>
+<li>gcc </li>
+<li>gcc-c++ </li>
+<li>pcre </li>
+<li>pcre-devel</li>
+<li>zlib-devel</li>
+<li>openssl</li>
+<li>openssl-devel</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y gcc gcc-c++ pcre pcre-devel zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
+<h6 id="下载_&amp;_解压">下载 &amp; 解压</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://nginx.org/download/nginx-<span class="number">1.9</span>.<span class="number">3</span>.tar.gz</span><br><span class="line">tar -zxvf nginx-<span class="number">1.9</span>.<span class="number">3</span>.tar.gz</span><br></pre></td></tr></table></figure>
+<h6 id="编译">编译</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nginx-<span class="number">1.9</span>.<span class="number">3</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/web/nginx</span><br><span class="line">make &amp; make install</span><br></pre></td></tr></table></figure>
+<h6 id="配置">配置</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/<span class="built_in">local</span>/web/nginx/conf/nginx.conf     <span class="comment">#进行配置修改</span></span><br></pre></td></tr></table></figure>
+<h6 id="设置根目录">设置根目录</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">       listen       <span class="number">80</span>;</span><br><span class="line">       server_name  localhost;</span><br><span class="line"></span><br><span class="line">       <span class="comment">#charset koi8-r;</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">       location / &#123;</span><br><span class="line">           root   /vagrant;   <span class="comment">#网站根目录</span></span><br><span class="line">           index  index.html index.htm;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<h6 id="启动">启动</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/web/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<h6 id="查看_进程">查看 进程</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
+<p>如果发现 <code>nginx: master</code>  表明 <code>nginx</code> 已经启动</p>
+<h3 id="Mysql">Mysql</h3><h6 id="下载_&amp;_安装">下载 &amp; 安装</h6><p>优先查看是否已经安装了 <code>mysql</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></table></figure></p>
+<p>如果已经安装 则可通过 <code>rpm -e mysql-libs</code> or <code>rpm -e mysql</code> 命令进行卸载操作 <code>grep</code> 获取的信息来判断<br>如果遇到有依赖关系无法删除的情况 可以使用 <code>rpm -e --nodeps mysql-libs</code> 来进行强制删除</p>
+<p>我们可以通过<code>yum</code>命令进行mysql 安装操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list | grep mysql</span><br><span class="line">yum install -y mysql-server mysql mysql-devel</span><br></pre></td></tr></table></figure></p>
+<p>可以通过命令 <code>rpm -qi mysql-server</code> 来查看 <code>mysql-server</code> 的版本信息<br>通过yum安装的一般不是最新版本<br>如果想进行安装最新版本 可以通过如下方式进行安装  请注意选择 <code>32位</code> or <code>64位</code><br>下载地址:<code>http://dev.mysql.com/downloads/mysql/5.5.html#downloads</code></p>
+<h6 id="相关依赖">相关依赖</h6><ul>
+<li>perl</li>
+<li>libaio</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y perl libaio</span><br></pre></td></tr></table></figure>
+<p><code>64位 :</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdn.mysql.com/Downloads/MySQL-<span class="number">5.5</span>/MySQL-server-<span class="number">5.5</span>.<span class="number">44</span>-<span class="number">1</span>.el6.x86_64.rpm</span><br><span class="line">wget -c http://cdn.mysql.com/Downloads/MySQL-<span class="number">5.5</span>/MySQL-client-<span class="number">5.5</span>.<span class="number">44</span>-<span class="number">1</span>.el6.x86_64.rpm</span><br><span class="line">wget -c http://cdn.mysql.com/Downloads/MySQL-<span class="number">5.5</span>/MySQL-devel-<span class="number">5.5</span>.<span class="number">44</span>-<span class="number">1</span>.el6.x86_64.rpm</span><br></pre></td></tr></table></figure></p>
+<p>下载完成后 进行安装操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh MySQL-server-<span class="number">5.5</span>.<span class="number">44</span>-<span class="number">1</span>.el6.x86_64.rpm MySQL-client-<span class="number">5.5</span>.<span class="number">44</span>-<span class="number">1</span>.el6.x86_64.rpm MySQL-devel-<span class="number">5.5</span>.<span class="number">44</span>-<span class="number">1</span>.el6.x86_64.rpm</span><br></pre></td></tr></table></figure></p>
+<p>安装完成后可以通过命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure></p>
+<p>查看是否安装成功<br>如果出现以下内容<code>ERROR 2002 (HY000): Can&#39;t connect to local MySQL server through socket &#39;/var/lib/mysql/mysql.sock&#39; (2)</code> 表明需要启动mysql服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure></p>
+<p><code>注意：</code> 通过yum安装方式 服务启动为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start  <span class="comment"># or /etc/init.d/mysqld start</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="PHP">PHP</h3><h6 id="下载_&amp;_安装-1">下载 &amp; 安装</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y php</span><br></pre></td></tr></table></figure>
+<p>但是 <code>yum</code> 安装的<code>php</code> 通常不是最新的版本 (可以通过命令<code>php -v</code> 进行查看当前安装的php 版本)</p>
+<h6 id="手动安装">手动安装</h6><h6 id="依赖项：-1">依赖项：</h6><ul>
+<li>bzip2-devel</li>
+<li>libxml2-devel</li>
+<li>curl-devel</li>
+<li>db4-devel</li>
+<li>libpng-devel</li>
+<li>freetype-devel</li>
+<li>libjpeg-devel</li>
+<li>php-mcrypt  </li>
+<li>libmcrypt </li>
+<li>libmcrypt-devel</li>
+<li>openssl-devel</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum remove php <span class="comment"># 先删除通过yum安装的php</span></span><br><span class="line"><span class="comment">#安装依赖</span></span><br><span class="line">yum install -y libxml2 libxml2-devel libjpeg libjpeg-devel bzip2-devel curl-devel db4-devel libpng-devel freetype-devel php-mcrypt libmcrypt libmcrypt-devel openssl-devel</span><br><span class="line"><span class="comment">##### 有的依赖需要用第三方源安装</span></span><br><span class="line"><span class="comment"># wget http://www.atomicorp.com/installers/atomic</span></span><br><span class="line"><span class="comment"># sh ./atomic</span></span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">wget -c http://cn2.php.net/get/php-<span class="number">5.6</span>.<span class="number">11</span>.tar.gz/from/this/mirror</span><br></pre></td></tr></table></figure>
+<p>下载完成后：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf php-<span class="number">5.6</span>.<span class="number">11</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> php-<span class="number">5.6</span>.<span class="number">11</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/web/php</span><br><span class="line"> <span class="comment">#常规编译选项</span></span><br><span class="line"> <span class="comment">#./configure --prefix=/usr/local/web/php --with-config-file-path=/usr/local/web/php/etc --enable-fpm  --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir --with-freetype-dir=/usr/local/freetype --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --with-gettext --disable-fileinfo</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<h6 id="使用php-cgi">使用php-cgi</h6><p>使用<code>php-cgi</code>启动前需要先进行<code>php.ini</code>配置<br>设置如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cgi.fix_pathinfo = <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>配合<code>nginx</code>使用 需要进行配置<code>nginx.conf</code><br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">location</span> <span class="regexp">~ \.php$</span> &#123;</span><br><span class="line">       <span class="comment">#   set $root /vagrant</span></span><br><span class="line">           <span class="title">root</span> <span class="variable">$root</span>;    <span class="comment">#网站根目录</span></span><br><span class="line">           <span class="title">fastcgi_pass</span>   <span class="number">127.0.0.1:9000</span>;</span><br><span class="line">           <span class="title">fastcgi_index</span>  index.php;</span><br><span class="line">           <span class="title">fastcgi_param</span>  SCRIPT_FILENAME  <span class="variable">$root</span><span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">           <span class="title">include</span>        fastcgi_params;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<p>启动：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/web/nginx/sbin/nginx <span class="operator">-s</span> reload</span><br><span class="line">/usr/<span class="built_in">local</span>/web/php/bin/php-cgi -b <span class="number">9000</span>           <span class="comment">#启动并绑定9000端口</span></span><br></pre></td></tr></table></figure></p>
+<h6 id="使用php-fpm">使用php-fpm</h6><p>除了上边<code>php-cgi</code>的方式配配合<code>nginx</code> ,我们还可以使用<code>php-fpm</code>配合<code>nginx</code>使用<br>使用<code>php-fpm</code>需要在编译php的时候 开启<code>php-fpm</code>才行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-fpm --enable-mbstring --prefix=/usr/<span class="built_in">local</span>/web/php</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<p>优点:修改<code>php.ini</code>可以平滑启动 不需要重启服务<br><code>php-cgi</code> 因为是<code>long-live</code>模式 修改<code>php.ini</code>必须要重启服务才能生效</p>
+<p>安装完成后 进行<code>php-fpm</code>配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/<span class="built_in">local</span>/web/php/etc/php-fpm.conf.default /usr/<span class="built_in">local</span>/web/php/etc/php-fpm.conf</span><br><span class="line">vi /usr/<span class="built_in">local</span>/web/php/etc/php-fpm.conf</span><br></pre></td></tr></table></figure></p>
+<p>将<code>php-fpm</code>作为服务启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp ./sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</span><br><span class="line">chmod a+x /etc/init.d/php-fpm</span><br></pre></td></tr></table></figure></p>
+<p>启动：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service php-fpm start</span><br></pre></td></tr></table></figure></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://dearmadman.com/2015/07/15/other/" data-id="cifkdyo93000iezd1f9w571ta" class="article-share-link">Share</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centOs/">centOs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lnmp/">lnmp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+      </footer>
+    </div>
+  </article>
+  
+
+            </div>
+          </section>
+          <aside id="sidebar">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+  <div class="sidebar-top">
+    <p>code monkey or code artisan</p>
+   <!-- <ul class="social-links">
+      
+        <li><a class="social-tooltip" title="github" href="https://github.com/dearmadman" target="_blank"><i id="icon-github" class="icon"></i></a></li>
+      
+    </ul> -->
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/12/laravel-5-event/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          laravel 5.1 events
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/2015/07/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Hello World</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
+  
+  <div class="widgets-container">
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/09/flexbox/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s21.jpg
+)" alt="flexbox" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/10/09/flexbox/" class="title">flexbox</a></p>
+              <p class="item-date"><time datetime="2015-10-09T06:47:53.000Z" itemprop="datePublished">2015-10-09</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/21/ajax-long-poll-sockets/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s20.jpg
+)" alt="ajax long poll sockets" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2015/09/21/ajax-long-poll-sockets/" class="title">ajax long poll sockets</a></p>
+              <p class="item-date"><time datetime="2015-09-21T03:32:53.000Z" itemprop="datePublished">2015-09-21</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/19/run-ngrok-on-your-own-server/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s19.jpg
+)" alt="run ngrok on your own server" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
+              <p class="item-title"><a href="/2015/09/19/run-ngrok-on-your-own-server/" class="title">run ngrok on your own server</a></p>
+              <p class="item-date"><time datetime="2015-09-19T08:28:48.000Z" itemprop="datePublished">2015-09-19</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/16/margin-top-meger/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s18.jpg
+)" alt="css盒模型 垂直方向magin合并问题" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a><i class="icon" id="icon-angle-right"></i><a class="article-category-link" href="/categories/other/css/">css</a></p>
+              <p class="item-title"><a href="/2015/09/16/margin-top-meger/" class="title">css盒模型 垂直方向magin合并问题</a></p>
+              <p class="item-date"><time datetime="2015-09-16T06:05:38.000Z" itemprop="datePublished">2015-09-16</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/15/design-tools/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s17.jpg
+)" alt="design tools" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/09/15/design-tools/" class="title">design tools</a></p>
+              <p class="item-date"><time datetime="2015-09-15T04:00:28.000Z" itemprop="datePublished">2015-09-15</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/nodejs/">nodejs</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/laravel/">laravel</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/ubuntu/">ubuntu</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/other/css/">css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/centOs/">centOs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lnmp/">lnmp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpStorm/">phpStorm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polipo/">polipo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-float">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/centOs/" style="font-size: 10px;">centOs</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gulp/" style="font-size: 12.5px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/lnmp/" style="font-size: 12.5px;">lnmp</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/phpStorm/" style="font-size: 10px;">phpStorm</a> <a href="/tags/polipo/" style="font-size: 10px;">polipo</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://icodeit.org">icodeit</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  
+  <div class="container">
+    <div class="container-inner">
+      <a id="back-to-top" href="javascript:;"><i class="icon" id="icon-angle-up"></i></a>
+      <div class="credit">
+        <h1 class="logo-wrap">
+          <a href="/" class="logo"></a>
+        </h1>
+        <p>&copy; 2015 wang</p>
+        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
+  <script src="/scrollLoading/main.js" type="text/javascript"></script>
+
+
+<script src="/js/html-patch.js" type="text/javascript"></script>
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

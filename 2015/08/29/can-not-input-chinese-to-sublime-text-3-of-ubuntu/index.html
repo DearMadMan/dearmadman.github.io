@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>解决ubuntu下sublime text 3无法输入中文 | dearmadman-王奇的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="can’t input chinese to sublime of ubuntu测试环境
+ubuntu 14.04
+搜狗输入法 for linux
+Sublime Text 3
+
+依赖
+libgtk2.0-dev
+
+1sudo apt-get install libgtk2.0-dev
+编译共享库1vi sublime_imfix.c
+讲下面代码写入 sublime_imfix.c
+1234567">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决ubuntu下sublime text 3无法输入中文">
+<meta property="og:url" content="http://dearmadman.com/2015/08/29/can-not-input-chinese-to-sublime-text-3-of-ubuntu/index.html">
+<meta property="og:site_name" content="dearmadman-王奇的博客">
+<meta property="og:description" content="can’t input chinese to sublime of ubuntu测试环境
+ubuntu 14.04
+搜狗输入法 for linux
+Sublime Text 3
+
+依赖
+libgtk2.0-dev
+
+1sudo apt-get install libgtk2.0-dev
+编译共享库1vi sublime_imfix.c
+讲下面代码写入 sublime_imfix.c
+1234567">
+<meta property="og:image" content="http://dearmadman.com/images/s01.jpg">
+<meta property="og:updated_time" content="2015-08-30T08:54:49.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="解决ubuntu下sublime text 3无法输入中文">
+<meta name="twitter:description" content="can’t input chinese to sublime of ubuntu测试环境
+ubuntu 14.04
+搜狗输入法 for linux
+Sublime Text 3
+
+依赖
+libgtk2.0-dev
+
+1sudo apt-get install libgtk2.0-dev
+编译共享库1vi sublime_imfix.c
+讲下面代码写入 sublime_imfix.c
+1234567">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  
+  
+    <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
+  
+  
+
+
+  
+
+  
+    <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div class="container">
+      <div class="container-inner">
+        <div id="header-title">
+          <h1 class="logo-wrap">
+            <a href="/" class="logo"></a>
+          </h1>
+          
+            <h2 class="subtitle-wrap">
+              <p class="subtitle">Beautiful work by passionate people.</p>
+            </h2>
+          
+        </div>
+        <div id="header-inner" class="nav-container">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <div class="nav-container-inner">
+            <ul id="main-nav">
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">Home</a></li>
+              
+                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/">javascript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/nodejs/">nodejs</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/laravel/">laravel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/">linux</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/ubuntu/">ubuntu</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/">other</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/css/">css</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/php/">php</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ubuntu/">ubuntu</a></li></ul>
+                  
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="https://github.com/dearmadman">github</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about">About</a></li>
+              
+            </ul>
+            <nav id="sub-nav">
+              <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://dearmadman.com"></form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <div class="main-body container-inner">
+        <div class="main-body-inner">
+          <section id="main">
+            <div class="main-body-header">
+
+              <h1 class="header"><a class="page-title-link" href="/categories/linux/">linux</a></h1>
+            </div>
+            <div class="main-body-content">
+              
+  <article id="post-can-not-input-chinese-to-sublime-text-3-of-ubuntu" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      解决ubuntu下sublime text 3无法输入中文
+    </h1>
+  
+
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/08/29/can-not-input-chinese-to-sublime-text-3-of-ubuntu/" class="article-date">
+  <time datetime="2015-08-29T15:00:40.000Z" itemprop="datePublished">2015-08-29</time>
+</a>
+      </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="/images/s01.jpg" alt=""></p>
+<h1 id="can’t_input_chinese_to_sublime_of_ubuntu">can’t input chinese to sublime of ubuntu</h1><h2 id="测试环境">测试环境</h2><ul>
+<li>ubuntu 14.04</li>
+<li>搜狗输入法 for linux</li>
+<li>Sublime Text 3</li>
+</ul>
+<h2 id="依赖">依赖</h2><ul>
+<li>libgtk2.0-dev</li>
+</ul>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libgtk2.0-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<h2 id="编译共享库">编译共享库</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">vi</span> <span class="tag">sublime_imfix</span><span class="class">.c</span></span><br></pre></td></tr></table></figure>
+<p>讲下面代码写入 sublime_imfix.c</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">#</span><span class="preprocessor"><span class="keyword">include</span> &lt;gtk/gtkimcontext.h&gt;</span></span><br><span class="line">void gtk_im_context_set_client_window <span class="params">(GtkIMContext *context,</span><br><span class="line">         GdkWindow    *window)</span></span><br><span class="line">&#123;</span><br><span class="line"> GtkIMContextClass <span class="built_in">*</span>klass;</span><br><span class="line"> g_return_if_fail <span class="params">(GTK_IS_IM_CONTEXT <span class="params">(context)</span>)</span>;</span><br><span class="line"> klass = GTK_IM_CONTEXT_GET_CLASS <span class="params">(context)</span>;</span><br><span class="line"> <span class="keyword">if</span> <span class="params">(klass-&gt;set_client_window)</span></span><br><span class="line">   klass-&gt;set_client_window <span class="params">(context, window)</span>;</span><br><span class="line"> g_object_set_data<span class="params">(G_OBJECT<span class="params">(context)</span>,<span class="string">"window"</span>,window)</span>;</span><br><span class="line"> <span class="keyword">if</span><span class="params">(!GDK_IS_WINDOW <span class="params">(window)</span>)</span></span><br><span class="line">   return;</span><br><span class="line"> int width = gdk_window_get_width<span class="params">(window)</span>;</span><br><span class="line"> int height = gdk_window_get_height<span class="params">(window)</span>;</span><br><span class="line"> <span class="keyword">if</span><span class="params">(width != <span class="number">0</span> &amp;&amp; height !=<span class="number">0</span>)</span></span><br><span class="line">   gtk_im_context_focus_in<span class="params">(context)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进行便以操作<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -shared -o libsublime-imfix<span class="class">.so</span> sublime_imfix<span class="class">.c</span>  `pkg-config --libs --cflags gtk+-<span class="number">2.0</span>` -fPIC</span><br></pre></td></tr></table></figure></p>
+<p>将编译完成的共享库移动到sublime目录下:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv libsublime-imfix<span class="class">.so</span> /opt/sublime_text/</span><br></pre></td></tr></table></figure></p>
+<h2 id="代码嵌入">代码嵌入</h2><p>先修改subl命令 </p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/usr/</span>bin<span class="regexp">/subl</span></span><br></pre></td></tr></table></figure>
+<p>优先加载共享库，使用gtk处理输入，替换：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">exec</span> /<span class="preprocessor">opt</span>/<span class="keyword">sublime_text/sublime_text </span><span class="string">"$@"</span></span><br></pre></td></tr></table></figure></p>
+<p>为:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">LD_PRELOAD</span>=/<span class="preprocessor">opt</span>/<span class="keyword">sublime_text/libsublime-imfix.so </span>exec /<span class="preprocessor">opt</span>/<span class="keyword">sublime_text/sublime_text </span><span class="string">"$@"</span></span><br></pre></td></tr></table></figure></p>
+<p>此时使用terminal使用subl命令打开sublime编辑器可以输入中文。</p>
+<p>想要在launcher或者Open with 打开的sublime可以输入中文，需要修改desktop文件</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/usr/</span>share<span class="regexp">/applications/</span>sublime_text.desktop</span><br></pre></td></tr></table></figure>
+<p>进行处理：</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">#Exec</span>=/<span class="preprocessor">opt</span>/<span class="keyword">sublime_text/sublime_text </span>%F</span><br><span class="line"><span class="label">Exec</span><span class="label">=bash</span> -c <span class="string">"LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text %F"</span></span><br><span class="line"></span><br><span class="line"><span class="label">#Exec</span>=/<span class="preprocessor">opt</span>/<span class="keyword">sublime_text/sublime_text </span>-n</span><br><span class="line"><span class="label">Exec</span><span class="label">=bash</span> -c <span class="string">"LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text -n"</span></span><br><span class="line"></span><br><span class="line"><span class="label">#Exec</span>=/<span class="preprocessor">opt</span>/<span class="keyword">sublime_text/sublime_text </span>--command new_file</span><br><span class="line"><span class="label">Exec</span><span class="label">=bash</span> -c <span class="string">"LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text --command new_file"</span></span><br></pre></td></tr></table></figure>
+<p>保存之后就可以在sublime中输入中文了</p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://dearmadman.com/2015/08/29/can-not-input-chinese-to-sublime-text-3-of-ubuntu/" data-id="cifkdyoa0002eezd1mdljq0gy" class="article-share-link">Share</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+
+      </footer>
+    </div>
+  </article>
+  
+
+            </div>
+          </section>
+          <aside id="sidebar">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+  <div class="sidebar-top">
+    <p>code monkey or code artisan</p>
+   <!-- <ul class="social-links">
+      
+        <li><a class="social-tooltip" title="github" href="https://github.com/dearmadman" target="_blank"><i id="icon-github" class="icon"></i></a></li>
+      
+    </ul> -->
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/30/Complied-nodejs-in-ubuntu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Complied nodejs in ubuntu
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/2015/08/29/linux-fstable-详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">linux fstable 详解</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
+  
+  <div class="widgets-container">
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/09/flexbox/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s21.jpg
+)" alt="flexbox" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/10/09/flexbox/" class="title">flexbox</a></p>
+              <p class="item-date"><time datetime="2015-10-09T06:47:53.000Z" itemprop="datePublished">2015-10-09</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/21/ajax-long-poll-sockets/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s20.jpg
+)" alt="ajax long poll sockets" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2015/09/21/ajax-long-poll-sockets/" class="title">ajax long poll sockets</a></p>
+              <p class="item-date"><time datetime="2015-09-21T03:32:53.000Z" itemprop="datePublished">2015-09-21</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/19/run-ngrok-on-your-own-server/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s19.jpg
+)" alt="run ngrok on your own server" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
+              <p class="item-title"><a href="/2015/09/19/run-ngrok-on-your-own-server/" class="title">run ngrok on your own server</a></p>
+              <p class="item-date"><time datetime="2015-09-19T08:28:48.000Z" itemprop="datePublished">2015-09-19</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/16/margin-top-meger/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s18.jpg
+)" alt="css盒模型 垂直方向magin合并问题" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a><i class="icon" id="icon-angle-right"></i><a class="article-category-link" href="/categories/other/css/">css</a></p>
+              <p class="item-title"><a href="/2015/09/16/margin-top-meger/" class="title">css盒模型 垂直方向magin合并问题</a></p>
+              <p class="item-date"><time datetime="2015-09-16T06:05:38.000Z" itemprop="datePublished">2015-09-16</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/09/15/design-tools/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s17.jpg
+)" alt="design tools" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/09/15/design-tools/" class="title">design tools</a></p>
+              <p class="item-date"><time datetime="2015-09-15T04:00:28.000Z" itemprop="datePublished">2015-09-15</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/nodejs/">nodejs</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/laravel/">laravel</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/ubuntu/">ubuntu</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/other/css/">css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/centOs/">centOs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lnmp/">lnmp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpStorm/">phpStorm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polipo/">polipo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-float">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/centOs/" style="font-size: 10px;">centOs</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gulp/" style="font-size: 12.5px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/lnmp/" style="font-size: 12.5px;">lnmp</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/phpStorm/" style="font-size: 10px;">phpStorm</a> <a href="/tags/polipo/" style="font-size: 10px;">polipo</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://icodeit.org">icodeit</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  
+  <div class="container">
+    <div class="container-inner">
+      <a id="back-to-top" href="javascript:;"><i class="icon" id="icon-angle-up"></i></a>
+      <div class="credit">
+        <h1 class="logo-wrap">
+          <a href="/" class="logo"></a>
+        </h1>
+        <p>&copy; 2015 wang</p>
+        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
+  <script src="/scrollLoading/main.js" type="text/javascript"></script>
+
+
+<script src="/js/html-patch.js" type="text/javascript"></script>
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
