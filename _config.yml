@@ -74,7 +74,7 @@ deploy:
   type: git
   repo: git@github.com:DearMadMan/dearmadman.github.io.git
   branch: gh-pages
-  message: 'update'
+  message: 'blog updated'
 
 
 

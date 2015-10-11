@@ -18,5 +18,5 @@ flexbox布局
 `flex-wrap: nowrap | wrap | wrap-reverse`
 `align-items: flex-start | flex-end | center | baseline | stretch`
 `justify-content: flex-start | flex-end | center | space-between | space-around`
+`flex: flex-grow | flex-shrink | flex-basis`
 span``
-
