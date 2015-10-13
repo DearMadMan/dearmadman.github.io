@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git Continuous integration practice | dearmadman-王奇的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git Continuous integration practicestep 1: Clone your project on your server1git clone git@somegitserver:yourusername/yourprojectname.git
+step 2: Add WebHook on you gitServer1#webhoos url : http://tes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git Continuous integration practice">
+<meta property="og:url" content="http://dearmadman.com/2015/10/13/git-Continuous-integration-practice/index.html">
+<meta property="og:site_name" content="dearmadman-王奇的博客">
+<meta property="og:description" content="git Continuous integration practicestep 1: Clone your project on your server1git clone git@somegitserver:yourusername/yourprojectname.git
+step 2: Add WebHook on you gitServer1#webhoos url : http://tes">
+<meta property="og:image" content="http://dearmadman.com/images/s26.jpg">
+<meta property="og:updated_time" content="2015-10-13T03:55:23.657Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git Continuous integration practice">
+<meta name="twitter:description" content="git Continuous integration practicestep 1: Clone your project on your server1git clone git@somegitserver:yourusername/yourprojectname.git
+step 2: Add WebHook on you gitServer1#webhoos url : http://tes">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  
+  
+    <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
+  
+  
+
+
+  
+
+  
+    <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div class="container">
+      <div class="container-inner">
+        <div id="header-title">
+          <h1 class="logo-wrap">
+            <a href="/" class="logo"></a>
+          </h1>
+          
+            <h2 class="subtitle-wrap">
+              <p class="subtitle">Beautiful work by passionate people.</p>
+            </h2>
+          
+        </div>
+        <div id="header-inner" class="nav-container">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <div class="nav-container-inner">
+            <ul id="main-nav">
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">Home</a></li>
+              
+                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/">javascript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/nodejs/">nodejs</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/laravel/">laravel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/">linux</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/ubuntu/">ubuntu</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/">other</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/other/css/">css</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/php/">php</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ubuntu/">ubuntu</a></li></ul>
+                  
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="https://github.com/dearmadman">github</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about">About</a></li>
+              
+            </ul>
+            <nav id="sub-nav">
+              <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://dearmadman.com"></form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <div class="main-body container-inner">
+        <div class="main-body-inner">
+          <section id="main">
+            <div class="main-body-header">
+
+              <h1 class="header"><a class="page-title-link" href="/categories/linux/">linux</a></h1>
+            </div>
+            <div class="main-body-content">
+              
+  <article id="post-git-Continuous-integration-practice" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      git Continuous integration practice
+    </h1>
+  
+
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/10/13/git-Continuous-integration-practice/" class="article-date">
+  <time datetime="2015-10-13T03:22:03.000Z" itemprop="datePublished">2015-10-13</time>
+</a>
+      </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="/images/s26.jpg" alt=""></p>
+<h1 id="git_Continuous_integration_practice">git Continuous integration practice</h1><h2 id="step_1:_Clone_your_project_on_your_server">step 1: Clone your project on your server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@somegitserver:yourusername/yourprojectname.git</span><br></pre></td></tr></table></figure>
+<h2 id="step_2:_Add_WebHook_on_you_gitServer">step 2: Add WebHook on you gitServer</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#webhoos url : http://test.domian.com/sync.php</span></span><br></pre></td></tr></table></figure>
+<h2 id="step_3:_Config_your_server_auth_authorization">step 3: Config your server auth authorization</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd sync_user</span><br></pre></td></tr></table></figure>
+<h2 id="step_4:_Config_your_php-fpm_run_level">step 4: Config your php-fpm run level</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/<span class="built_in">local</span>/web/php/etc/php-fpm.conf</span><br></pre></td></tr></table></figure>
+<p><code>change</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user = sync_user</span><br><span class="line">group = sync_user</span><br></pre></td></tr></table></figure>
+<h2 id="step_5:_set_you_web_dir’s_owner">step 5: set you web dir’s owner</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown sync_user:sync_user -R  myweb</span><br></pre></td></tr></table></figure>
+<h2 id="step_6:_add_sync-php_into_your_web_root_dir">step 6: add sync.php into your web root dir</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi myweb/sync.php</span><br></pre></td></tr></table></figure>
+<p><code>change</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">date_default_timezone_<span class="built_in">set</span>(<span class="string">'PRC'</span>);</span><br><span class="line"><span class="variable">$valid_ip</span> = array(<span class="string">'127.0.0.1'</span>);</span><br><span class="line"><span class="variable">$client_ip</span> = <span class="variable">$_SERVER</span>[<span class="string">'REMOTE_ADDR'</span>];</span><br><span class="line"><span class="variable">$fs</span> = fopen(<span class="string">'/home/www/logs/example_hook.log'</span>, <span class="string">'a'</span>);</span><br><span class="line">fwrite(<span class="variable">$fs</span>, <span class="string">'Request on ['</span>.date(<span class="string">"Y-m-d H:i:s"</span>).<span class="string">'] from ['</span>.<span class="variable">$client_ip</span>.<span class="string">']'</span>.PHP_EOL);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ( ! <span class="keyword">in</span>_array(<span class="variable">$client_ip</span>, <span class="variable">$valid_ip</span>))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"error 10002"</span>;</span><br><span class="line">    fwrite(<span class="variable">$fs</span>, <span class="string">"Invalid ip [&#123;<span class="variable">$client_ip</span>&#125;]"</span>.PHP_EOL);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$json</span> = file_get_contents(<span class="string">'php://input'</span>);</span><br><span class="line"><span class="variable">$data</span> = json_decode(<span class="variable">$json</span>, <span class="literal">true</span>);</span><br><span class="line">fwrite(<span class="variable">$fs</span>, <span class="string">'Data: '</span>.print_r(<span class="variable">$data</span>, <span class="literal">true</span>).PHP_EOL);</span><br><span class="line">fwrite(<span class="variable">$fs</span>, <span class="string">'======================================================================='</span>.PHP_EOL);</span><br><span class="line">fclose(<span class="variable">$fs</span>);</span><br><span class="line"><span class="built_in">exec</span>(<span class="string">"sh /home/www/shell/update.sh"</span>,<span class="variable">$tt</span>);</span><br><span class="line"><span class="built_in">print</span>_r(<span class="variable">$tt</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="step_7:_code_the_shell:">step 7: code the shell:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /home/www/shell/update.sh</span><br></pre></td></tr></table></figure>
+<p><code>change:</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/etc/bash</span></span><br><span class="line"><span class="built_in">cd</span> /home/www/myweb</span><br><span class="line">git remote update -p</span><br><span class="line">git checkout <span class="operator">-f</span> origin/master</span><br><span class="line">git submodule update --init</span><br></pre></td></tr></table></figure>
+<h2 id="step_8:_login_your_server_with_user_sync_user">step 8: login your server with user sync_user</h2><h2 id="step_9:_generate_your_public_key_and_add_to_your_gitserver">step 9: generate your public key and add to your gitserver</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"YOUR_EMAIL@YOUREMAIL.COM"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#when done</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment">#copy to your gitserver</span></span><br></pre></td></tr></table></figure>
+<h2 id="step_10:_test_the_shell_(must_run_once)">step 10: test the shell (must run once)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh update.sh</span><br></pre></td></tr></table></figure>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://dearmadman.com/2015/10/13/git-Continuous-integration-practice/" data-id="cifotyhjt002c3xd1lamdy2bx" class="article-share-link">Share</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+      </footer>
+    </div>
+  </article>
+  
+
+            </div>
+          </section>
+          <aside id="sidebar">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+  <div class="sidebar-top">
+    <p>code monkey or code artisan</p>
+   <!-- <ul class="social-links">
+      
+        <li><a class="social-tooltip" title="github" href="https://github.com/dearmadman" target="_blank"><i id="icon-github" class="icon"></i></a></li>
+      
+    </ul> -->
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/10/11/Error-watch-ENOSPC/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Error: watch ENOSPC</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
+  
+  <div class="widgets-container">
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/13/git-Continuous-integration-practice/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s26.jpg
+)" alt="git Continuous integration practice" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
+              <p class="item-title"><a href="/2015/10/13/git-Continuous-integration-practice/" class="title">git Continuous integration practice</a></p>
+              <p class="item-date"><time datetime="2015-10-13T03:22:03.000Z" itemprop="datePublished">2015-10-13</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/11/Error-watch-ENOSPC/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s25.jpg
+)" alt="Error: watch ENOSPC" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+              <p class="item-title"><a href="/2015/10/11/Error-watch-ENOSPC/" class="title">Error: watch ENOSPC</a></p>
+              <p class="item-date"><time datetime="2015-10-11T12:48:38.000Z" itemprop="datePublished">2015-10-11</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/11/ubuntu-applications/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s24.jpg
+)" alt="ubuntu applications" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a><i class="icon" id="icon-angle-right"></i><a class="article-category-link" href="/categories/linux/ubuntu/">ubuntu</a></p>
+              <p class="item-title"><a href="/2015/10/11/ubuntu-applications/" class="title">ubuntu applications</a></p>
+              <p class="item-date"><time datetime="2015-10-11T03:05:20.000Z" itemprop="datePublished">2015-10-11</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/11/customize-your-ubuntu-system/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s23.jpg
+)" alt="customize your ubuntu system" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a><i class="icon" id="icon-angle-right"></i><a class="article-category-link" href="/categories/linux/ubuntu/">ubuntu</a></p>
+              <p class="item-title"><a href="/2015/10/11/customize-your-ubuntu-system/" class="title">customize your ubuntu system</a></p>
+              <p class="item-date"><time datetime="2015-10-11T02:57:45.000Z" itemprop="datePublished">2015-10-11</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2015/10/11/config-laravel-on-server-product/" class="thumbnail">
+  
+    <span style="background-image:url(/images/s22.jpg
+)" alt="config laravel on server product" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/laravel/">laravel</a></p>
+              <p class="item-title"><a href="/2015/10/11/config-laravel-on-server-product/" class="title">config laravel on server product</a></p>
+              <p class="item-date"><time datetime="2015-10-11T02:28:21.000Z" itemprop="datePublished">2015-10-11</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/nodejs/">nodejs</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/laravel/">laravel</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/ubuntu/">ubuntu</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/other/css/">css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/centOs/">centOs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lnmp/">lnmp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/">other</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpStorm/">phpStorm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polipo/">polipo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-float">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/centOs/" style="font-size: 10px;">centOs</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/git/" style="font-size: 12.5px;">git</a> <a href="/tags/gulp/" style="font-size: 12.5px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/linux/" style="font-size: 17.5px;">linux</a> <a href="/tags/lnmp/" style="font-size: 12.5px;">lnmp</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/phpStorm/" style="font-size: 10px;">phpStorm</a> <a href="/tags/polipo/" style="font-size: 10px;">polipo</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://icodeit.org">icodeit</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  
+  <div class="container">
+    <div class="container-inner">
+      <a id="back-to-top" href="javascript:;"><i class="icon" id="icon-angle-up"></i></a>
+      <div class="credit">
+        <h1 class="logo-wrap">
+          <a href="/" class="logo"></a>
+        </h1>
+        <p>&copy; 2015 wang</p>
+        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
+  <script src="/scrollLoading/main.js" type="text/javascript"></script>
+
+
+<script src="/js/html-patch.js" type="text/javascript"></script>
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
