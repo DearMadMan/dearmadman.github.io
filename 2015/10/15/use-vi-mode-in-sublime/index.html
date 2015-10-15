@@ -3,22 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>laravel model&#39;s fillable and guarded | dearmadman-王奇的博客</title>
+  <title>use vi mode in sublime | dearmadman-王奇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="laravel的模型中fillable与guarded解析简介laravel的模型中有两个protected字段fillable与guarded，注意：必须是protected以上开放程度。我们经常通过提交表单进行数据的增删改，为了方便的进行数据批量修改操作laravel提供了批量赋值机制：
-假如我们想要在数据库表中添加一行，我们可以使用模型这么操作：1$model=Model::creat($r">
+  <meta name="description" content="use vi mode in sublimeconfig your user-settingPreferences-&amp;gt;Settings-User
+1234&amp;#123;	 # &quot;ignored_packages&quot;: [&quot;Vintage&quot;],	  &quot;ignored_packages&quot;: [] #to use Vintage to support vi mode&amp;#125;
+keymap inst">
 <meta property="og:type" content="article">
-<meta property="og:title" content="laravel model's fillable and guarded">
-<meta property="og:url" content="http://dearmadman.com/2015/08/14/laravel-model-s-fillable-and-guarded/index.html">
+<meta property="og:title" content="use vi mode in sublime">
+<meta property="og:url" content="http://dearmadman.com/2015/10/15/use-vi-mode-in-sublime/index.html">
 <meta property="og:site_name" content="dearmadman-王奇的博客">
-<meta property="og:description" content="laravel的模型中fillable与guarded解析简介laravel的模型中有两个protected字段fillable与guarded，注意：必须是protected以上开放程度。我们经常通过提交表单进行数据的增删改，为了方便的进行数据批量修改操作laravel提供了批量赋值机制：
-假如我们想要在数据库表中添加一行，我们可以使用模型这么操作：1$model=Model::creat($r">
-<meta property="og:image" content="http://dearmadman.com/images/c1.jpg">
-<meta property="og:updated_time" content="2015-09-03T06:18:48.486Z">
+<meta property="og:description" content="use vi mode in sublimeconfig your user-settingPreferences-&amp;gt;Settings-User
+1234&amp;#123;	 # &quot;ignored_packages&quot;: [&quot;Vintage&quot;],	  &quot;ignored_packages&quot;: [] #to use Vintage to support vi mode&amp;#125;
+keymap inst">
+<meta property="og:image" content="http://dearmadman.com/images/s28.jpg">
+<meta property="og:updated_time" content="2015-10-15T03:06:17.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="laravel model's fillable and guarded">
-<meta name="twitter:description" content="laravel的模型中fillable与guarded解析简介laravel的模型中有两个protected字段fillable与guarded，注意：必须是protected以上开放程度。我们经常通过提交表单进行数据的增删改，为了方便的进行数据批量修改操作laravel提供了批量赋值机制：
-假如我们想要在数据库表中添加一行，我们可以使用模型这么操作：1$model=Model::creat($r">
+<meta name="twitter:title" content="use vi mode in sublime">
+<meta name="twitter:description" content="use vi mode in sublimeconfig your user-settingPreferences-&amp;gt;Settings-User
+1234&amp;#123;	 # &quot;ignored_packages&quot;: [&quot;Vintage&quot;],	  &quot;ignored_packages&quot;: [] #to use Vintage to support vi mode&amp;#125;
+keymap inst">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -90,11 +93,11 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><a class="page-title-link" href="/categories/laravel/">laravel</a></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/other/">other</a></h1>
             </div>
             <div class="main-body-content">
               
-  <article id="post-laravel-model-s-fillable-and-guarded" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-use-vi-mode-in-sublime" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -102,35 +105,29 @@
           
   
     <h1 class="article-title" itemprop="name">
-      laravel model&#39;s fillable and guarded
+      use vi mode in sublime
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2015/08/14/laravel-model-s-fillable-and-guarded/" class="article-date">
-  <time datetime="2015-08-14T01:13:25.000Z" itemprop="datePublished">2015-08-14</time>
+        <a href="/2015/10/15/use-vi-mode-in-sublime/" class="article-date">
+  <time datetime="2015-10-15T02:58:53.000Z" itemprop="datePublished">2015-10-15</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="/images/c1.jpg" alt="guarded"></p>
-<h1 id="laravel的模型中fillable与guarded解析">laravel的模型中fillable与guarded解析</h1><h2 id="简介">简介</h2><p>laravel的模型中有两个<code>protected</code>字段<code>fillable</code>与<code>guarded</code>，注意：必须是<code>protected</code>以上开放程度。<br>我们经常通过提交表单进行数据的增删改，为了方便的进行数据批量修改操作laravel提供了批量赋值机制：</p>
-<p>假如我们想要在数据库表中添加一行，我们可以使用模型这么操作：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$model</span><span class="subst">=</span>Model<span class="tag">::creat</span>(<span class="variable">$request</span><span class="subst">-&gt;</span><span class="literal">all</span>());</span><br></pre></td></tr></table></figure></p>
-<p>ok，这样我们就直接将表单中提交过来的所有信息直接录入进了数据库,是不是非常非常的方便~,<code>但是</code>这样是非常不安全的，对于用户输入的数据，我们应该永远的谨慎对待。<br>我们不能将用户输入的恶意代码一起提交到数据库中吧~~~。<br>于是laravel中的模型就提供了<code>fillable</code>和<code>guarded</code>,使用也是非常简单，两者是互斥关系，存在一个就好,<code>如果同时存在,fillable优先级较高哦</code>、</p>
-<p><code>fillable</code>变量存储一个<code>允许</code>自动填充的数组，这里填写<code>允许</code>自动填充的模型字段，比如：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span>  <span class="variable">$fillable</span><span class="subst">=</span><span class="preprocessor">[</span><span class="string">'username'</span>,<span class="string">'password'</span>,<span class="string">'phone'</span>,<span class="string">'email'</span><span class="preprocessor">]</span><span class="markup">;</span></span><br></pre></td></tr></table></figure></p>
-<p>而<code>guarded</code>变量存储一个<code>不允许</code>自动填充的数组，这里填写<code>不允许</code>自动填充的模型字段，比如：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span>  <span class="variable">$guarded</span><span class="subst">=</span><span class="preprocessor">[</span><span class="string">'id'</span>,<span class="string">'manager_id'</span><span class="preprocessor">]</span><span class="markup">;</span></span><br></pre></td></tr></table></figure></p>
-<p>有时候我们希望通过<code>Model::create($data)</code>的方式存储表单数据，我们会在$data中存放一些敏感信息，但是一些敏感信息，create方法会直接过滤掉怎么办?<br>难道要存入数据库之后再….<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$model</span>-&gt;manager_id=<span class="number">1</span>;</span><br><span class="line"><span class="variable">$model</span>-&gt;save();</span><br></pre></td></tr></table></figure></p>
-<p>No!!!,这不是要写入两次数据库嘛！！！<br>嗯，我们可以这么来<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$model</span><span class="subst">=</span><span class="literal">new</span> Model(<span class="variable">$data</span>);</span><br><span class="line"><span class="variable">$model</span><span class="subst">-&gt;</span>manager_id<span class="subst">=</span><span class="number">1</span></span><br><span class="line"><span class="variable">$model</span><span class="subst">-&gt;</span>save();</span><br></pre></td></tr></table></figure></p>
-<p>对的，我们先使用laravel自带的批量赋值机制过滤一遍敏感信息，然后我们自己来过滤敏感信息的输入~~</p>
-<p><code>注意:</code> 当模型中未指定<code>fillable</code>与<code>guarded</code>时，即<code>$fillable=[]</code> and <code>$guarded==[*]</code> 时，传入模型实例化参数时会报<code>MassAssignmentException</code>错误；</p>
-
+        <p><img src="/images/s28.jpg" alt=""></p>
+<h1 id="use_vi_mode_in_sublime">use vi mode in sublime</h1><h2 id="config_your_user-setting">config your user-setting</h2><p><code>Preferences-&gt;Settings-User</code></p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;</span><br><span class="line">	 # <span class="string">"ignored_packages"</span>: <span class="collection">[<span class="string">"Vintage"</span>]</span>,</span><br><span class="line">	  <span class="string">"ignored_packages"</span>: <span class="collection">[]</span> #to use Vintage to support vi mode</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="keymap_insted_Esc">keymap insted Esc</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"j"</span>,<span class="string">"j"</span>],  <span class="string">"command"</span>: <span class="string">"exit_insert_mode"</span>,</span><br><span class="line">		<span class="string">"context"</span>:</span><br><span class="line">		[</span><br><span class="line">			&#123;<span class="string">"key"</span>: <span class="string">"setting.command_mode"</span>,<span class="string">"operand"</span>:<span class="literal">false</span>&#125;,</span><br><span class="line">			&#123;<span class="string">"key"</span>: <span class="string">"setting.is_widget"</span>,<span class="string">"operand"</span>:<span class="literal">false</span>&#125;</span><br><span class="line">		]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="my_keymap_config:">my keymap config:</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">	&#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+n"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"advanced_new_file_new"</span></span>&#125;,</span><br><span class="line">	&#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+enter"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"goto_python_definition"</span></span>&#125;,</span><br><span class="line">	&#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+1"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"toggle_side_bar"</span> </span>&#125;,</span><br><span class="line">	&#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+f12"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"side_bar_files_open_with"</span></span>,</span><br><span class="line">	             "<span class="attribute">args</span>": <span class="value">&#123;</span><br><span class="line">	                "<span class="attribute">paths</span>": <span class="value">[]</span>,</span><br><span class="line">	                "<span class="attribute">application</span>": <span class="value"><span class="string">"/usr/bin/X11/google-chrome"</span></span>,</span><br><span class="line">	                "<span class="attribute">extensions</span>":<span class="value"><span class="string">".*"</span> //any file with extension</span><br><span class="line">	            </span>&#125; </span><br><span class="line">	</span>&#125;,</span><br><span class="line">	&#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+alt+l"</span>]</span>,  "<span class="attribute">command</span>": <span class="value"><span class="string">"htmlprettify"</span></span>&#125;,</span><br><span class="line">	&#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"j"</span>,<span class="string">"j"</span>]</span>,  "<span class="attribute">command</span>": <span class="value"><span class="string">"exit_insert_mode"</span></span>,</span><br><span class="line">		"<span class="attribute">context</span>":</span><br><span class="line">		<span class="value">[</span><br><span class="line">			&#123;"<span class="attribute">key</span>": <span class="value"><span class="string">"setting.command_mode"</span></span>,"<span class="attribute">operand</span>":<span class="value"><span class="literal">false</span></span>&#125;,</span><br><span class="line">			&#123;"<span class="attribute">key</span>": <span class="value"><span class="string">"setting.is_widget"</span></span>,"<span class="attribute">operand</span>":<span class="value"><span class="literal">false</span></span>&#125;</span><br><span class="line">		]</span><br><span class="line">	</span>&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
       </div>
       <footer class="article-footer">
-        <a data-url="http://dearmadman.com/2015/08/14/laravel-model-s-fillable-and-guarded/" data-id="cifrnab69001v9vd1f5h815h4" class="article-share-link">Share</a>
+        <a data-url="http://dearmadman.com/2015/10/15/use-vi-mode-in-sublime/" data-id="cifrnab5h00079vd1hojbxsrm" class="article-share-link">Share</a>
         
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
 
       </footer>
     </div>
@@ -153,20 +150,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/08/19/if-error-do-not-stop-the-gulp-watcher/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">newer</strong>
-      <p class="article-nav-title">
-        
-          在报错时，让gulp监视仍继续的方法
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2015/08/12/laravel-5-event/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/10/14/need-todo-now/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">older</strong>
-      <p class="article-nav-title">laravel 5.1 events</p>
+      <p class="article-nav-title">need todo now</p>
       <i class="icon" id="icon-chevron-left"></i>
     </a>
   
