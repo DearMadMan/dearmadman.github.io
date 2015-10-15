@@ -19,7 +19,7 @@ tags: other
 ```
 
 
-## keymap insted Esc
+## keymap instead Esc
 
 ```
 { "keys": ["j","j"],  "command": "exit_insert_mode",
