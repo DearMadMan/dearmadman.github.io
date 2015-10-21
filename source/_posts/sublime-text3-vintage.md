@@ -37,5 +37,6 @@ tags: other
 ## Holding down a key won't repeat it In mac
 
 ```
+# use it on iterm2 or terminal
 defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
 ```
