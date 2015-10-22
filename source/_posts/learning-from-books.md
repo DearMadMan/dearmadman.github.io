@@ -6,6 +6,7 @@ tags:
 
 ![](/images/s16.jpg)
 # Learning from books
+~~`《ECMAScript 6》`~~
 ~~`《Discovery Meteor》`~~
 ~~`《大型网站技术架构核心原理与案例分析》`~~
 ~~`《nodejs 即学即用》`~~
