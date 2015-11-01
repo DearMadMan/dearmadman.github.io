@@ -8,5 +8,7 @@ tags: [other]
 
 # learn css
 
-[http://www.520ued.com/](http://www.520ued.com/)
+[http://www.w3cplus.com/](http://www.w3cplus.com/)
+
+[http://www.520ued.com/](http://www.520ued.com/) 
 
