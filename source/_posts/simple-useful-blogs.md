@@ -12,3 +12,11 @@ tags: [other]
 
 [http://www.520ued.com/](http://www.520ued.com/) 
 
+
+# responsive web design (web apps)
+
+[http://www.cnblogs.com/PeunZhang/p/3407453.html#meta](http://www.cnblogs.com/PeunZhang/p/3407453.html#meta)
+
+[http://www.cnblogs.com/lyzg/p/4877277.html](http://www.cnblogs.com/lyzg/p/4877277.html)
+
+[http://www.zcool.com.cn/article/ZMTY5OTA0.html](http://www.zcool.com.cn/article/ZMTY5OTA0.html)
