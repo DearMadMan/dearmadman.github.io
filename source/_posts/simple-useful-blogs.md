@@ -12,6 +12,8 @@ tags: [other]
 
 [http://www.520ued.com/](http://www.520ued.com/) 
 
+[http://f2edocs.com/style-guide/css-style-guide.html](http://f2edocs.com/style-guide/css-style-guide.html)
+
 
 # responsive web design (web apps)
 
@@ -20,3 +22,8 @@ tags: [other]
 [http://www.cnblogs.com/lyzg/p/4877277.html](http://www.cnblogs.com/lyzg/p/4877277.html)
 
 [http://www.zcool.com.cn/article/ZMTY5OTA0.html](http://www.zcool.com.cn/article/ZMTY5OTA0.html)
+
+
+# learn front-end
+
+[http://www.haomou.net/2015/12/09/2015_js_learn/](http://www.haomou.net/2015/12/09/2015_js_learn/)
