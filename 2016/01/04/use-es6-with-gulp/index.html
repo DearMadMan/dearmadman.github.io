@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: laravel | dearmadman-王奇的博客</title>
+  <title>use es6 with gulp | dearmadman-王奇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dearmadman-王奇的博客">
-<meta property="og:url" content="http://dearmadman.com/tags/laravel/index.html">
+  <meta name="description" content="useing es6 with gulpcheck your gulp versionFirstly make sure you have at least version 3.9 of both the CLI and local version of gulp.To check which version you have,open up terminal and type:
+1gulp -v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="use es6 with gulp">
+<meta property="og:url" content="http://dearmadman.com/2016/01/04/use-es6-with-gulp/index.html">
 <meta property="og:site_name" content="dearmadman-王奇的博客">
-<meta property="og:description">
+<meta property="og:description" content="useing es6 with gulpcheck your gulp versionFirstly make sure you have at least version 3.9 of both the CLI and local version of gulp.To check which version you have,open up terminal and type:
+1gulp -v">
+<meta property="og:image" content="http://dearmadman.com/images/s37.jpg">
+<meta property="og:updated_time" content="2016-01-04T07:07:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dearmadman-王奇的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="use es6 with gulp">
+<meta name="twitter:description" content="useing es6 with gulpcheck your gulp versionFirstly make sure you have at least version 3.9 of both the CLI and local version of gulp.To check which version you have,open up terminal and type:
+1gulp -v">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -85,166 +90,63 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-tag"></i>tag : <em>laravel</em></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/other/">other</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-use-es6-with-gulp" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon" id="icon-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/10/11/config-laravel-on-server-product/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span style="background-image:url(/images/s22.jpg
-)" alt="config laravel on server product" class="thumbnail-image"></span>
+    <h1 class="article-title" itemprop="name">
+      use es6 with gulp
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/laravel/">laravel</a></p>
-        <p class="date"><time datetime="2015-10-11T02:28:21.000Z" itemprop="datePublished">2015-10-11</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/10/11/config-laravel-on-server-product/" class="title">config laravel on server product</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-config laravel on server productstep 1:
-copy your web dir to server dir
-step 2:12chmod 777 -R storagechmod 777 -R bootstrap/cache
-if not 777 then failed enven if 757 mode
-step 3:config your .env file
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2016/01/04/use-es6-with-gulp/" class="article-date">
+  <time datetime="2016-01-04T06:55:33.000Z" itemprop="datePublished">2016-01-04</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="/images/s37.jpg" alt=""></p>
+<h1 id="useing_es6_with_gulp">useing es6 with gulp</h1><h2 id="check_your_gulp_version">check your gulp version</h2><p>Firstly make sure you have at least version <code>3.9</code> of both the CLI and local version of gulp.<br>To check which version you have,open up terminal and type:</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">gulp</span> -v</span><br></pre></td></tr></table></figure>
+<p>if you get any versions lower than <code>3.9</code>,update gulp in your <code>package.json</code> file, and run the follwing to update both versions:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> gulp &amp;&amp; npm <span class="keyword">install</span> gulp -<span class="keyword">g</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="create_an_es6_gulpfile">create an es6 gulpfile</h2><p>To leverage es6 you will need to install <code>babel</code>(make sure you have Babel 6) as a dependancy to your project,<br>along with the es2015 plugin preset:</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">npm</span> install <span class="keyword">babel-core </span><span class="keyword">babel-preset-es2015 </span>--save-dev</span><br></pre></td></tr></table></figure>
+<p>once this has finished, we need to create a <code>.babelrc</code> config file to enable the es2015 preset:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">touch</span> <span class="class">.babelrc</span></span><br></pre></td></tr></table></figure>
+<p>and add the following to the file:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">presets</span>": <span class="value">[<span class="string">"es2015"</span>]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>we then need to instruct gulp to use babel. to do this,we need to rename the <code>gulpfile.js</code> to <code>gulpfile.babel.js</code>:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv gulpfile<span class="class">.js</span> gulpfile<span class="class">.babel</span><span class="class">.js</span></span><br></pre></td></tr></table></figure>
+<p>we can now use es6 via babel!</p>
+<p><a href="https://markgoodyear.com/2015/06/using-es6-with-gulp/" target="_blank" rel="external">https://markgoodyear.com/2015/06/using-es6-with-gulp/</a></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://dearmadman.com/2016/01/04/use-es6-with-gulp/" data-id="ciizml3sk000kug93596w6b84" class="article-share-link">Share</a>
+        
+          <a href="http://dearmadman.com/2016/01/04/use-es6-with-gulp/#comments" class="article-comment-link">Comments</a>
+        
+        
+      </footer>
     </div>
   </article>
-
-    
   
-    
-    
-    
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/08/27/What-s-new-in-laravel-5-1/" class="thumbnail">
-  
-    <span style="background-image:url(/images/s04.jpg
-)" alt="What&#39;s new in laravel 5.1" class="thumbnail-image"></span>
-  
-</a>
-
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/laravel/">laravel</a></p>
-        <p class="date"><time datetime="2015-08-26T17:38:08.000Z" itemprop="datePublished">2015-08-27</time></p>
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </div>
-      <h2 class="article-title">
-        <a href="/2015/08/27/What-s-new-in-laravel-5-1/" class="title">What&#39;s new in laravel 5.1</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-What’s new in laravel 5.1Adopting PSR-2Injecting service in bladeElixirIntegration testingMode factoriesArtisan SignaturesDirectory changesDocs and LTSMiddleware parametersRoute group namesLogin thro
-      </p>
-    </div>
-  </article>
-
-    
-      </div>
-    
+    </section>
   
-    
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/08/14/laravel-model-s-fillable-and-guarded/" class="thumbnail">
-  
-    <span style="background-image:url(/images/c1.jpg
-)" alt="laravel model&#39;s fillable and guarded" class="thumbnail-image"></span>
-  
-</a>
-
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/laravel/">laravel</a></p>
-        <p class="date"><time datetime="2015-08-14T01:13:25.000Z" itemprop="datePublished">2015-08-14</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/08/14/laravel-model-s-fillable-and-guarded/" class="title">laravel model&#39;s fillable and guarded</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-laravel的模型中fillable与guarded解析简介laravel的模型中有两个protected字段fillable与guarded，注意：必须是protected以上开放程度。我们经常通过提交表单进行数据的增删改，为了方便的进行数据批量修改操作laravel提供了批量赋值机制：
-假如我们想要在数据库表中添加一行，我们可以使用模型这么操作：1$model=Model::creat($
-      </p>
-    </div>
-  </article>
-
-    
-  
-    
-    
-    
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/08/12/laravel-5-event/" class="thumbnail">
-  
-    <span style="background-image:url(/images/dj.jpeg
-)" alt="laravel 5.1 events" class="thumbnail-image"></span>
-  
-</a>
-
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/laravel/">laravel</a></p>
-        <p class="date"><time datetime="2015-08-11T22:08:33.000Z" itemprop="datePublished">2015-08-12</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/08/12/laravel-5-event/" class="title">laravel 5.1 events</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        今天研究了一下laravel的事件驱动，发现使用起来非常方便，来来~一起嗨起来~.这里只介绍一些简单的使用方法~  队列驱动以及广播分发以后使用到了再研究
-Laravel Events简介laravel的events提供了一些简单的观察者类实践,允许我们注册一些事件，并且允许我们注册一些事件监听者去监听这些事件，当我们触发某些事件时，相应的监听者将会触发handle方法。在这里我们可以处理一些相应
-      </p>
-    </div>
-  </article>
-
-    
-      </div>
-    
-  
-  
-    </div></section>
-  
-  
-
 
             </div>
           </section>
@@ -258,6 +160,19 @@ Laravel Events简介laravel的events提供了一些简单的观察者类实践,�
       
     </ul> -->
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/04/a-responsive-solution/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">a responsive solution</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
@@ -452,11 +367,13 @@ Laravel Events简介laravel的events提供了一些简单的观察者类实践,�
 <script>
   var disqus_shortname = 'dearmadman';
   
+  var disqus_url = 'http://dearmadman.com/2016/01/04/use-es6-with-gulp/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
