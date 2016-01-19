@@ -27,3 +27,23 @@ tags: [other]
 # learn front-end
 
 [http://www.haomou.net/2015/12/09/2015_js_learn/](http://www.haomou.net/2015/12/09/2015_js_learn/)
+
+# Other 
+
+[iiiyu](http://iiiyu.com/)
+
+[lvoyee](http://www.lvoyee.com/)
+
+[luopq](http://luopq.com/)
+
+[lxxyx](http://www.lxxyx.win/)
+
+[taobaofed](http://taobaofed.org/)
+
+[minyifei](http://blog.minyifei.cn/)
+
+[mzkmzk](https://mzkmzk.gitbooks.io/read/content/)
+
+# Learn Tags
+
+[Gulp](http://www.w3cplus.com/blog/tags/528.html)

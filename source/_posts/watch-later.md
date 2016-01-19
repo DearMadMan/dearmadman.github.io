@@ -32,3 +32,9 @@ Front-end Architecture and Performance Engineering
 
 PHP7新特性
 [http://www.php7.site/book/php7/22_variable-changes.html](http://www.php7.site/book/php7/22_variable-changes.html)
+
+秒杀系统架构分析与实战
+[http://my.oschina.net/xianggao/blog/524943?f=tt](http://my.oschina.net/xianggao/blog/524943?f=tt)
+
+mzkmzk读书总结
+[https://mzkmzk.gitbooks.io/read/content/tu_jie_http.html](https://mzkmzk.gitbooks.io/read/content/tu_jie_http.html)
