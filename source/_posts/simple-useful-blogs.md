@@ -44,6 +44,8 @@ tags: [other]
 
 [mzkmzk](https://mzkmzk.gitbooks.io/read/content/)
 
+[epubit](http://www.epubit.com.cn/)
+
 # Learn Tags
 
 [Gulp](http://www.w3cplus.com/blog/tags/528.html)

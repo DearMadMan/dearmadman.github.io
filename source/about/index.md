@@ -22,7 +22,7 @@ skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful, S
 
 ## keywords
 <div class="btn-inline">
-<button class="btn btn-outline" type="button">PHP</button><button class="btn btn-outline" type="button">Javascript</button><button class="btn btn-outline" type="button">Jquery</button><button class="btn btn-outline" type="button">Underscore</button><button class="btn btn-outline" type="button">Backbone</button><button class="btn btn-outline" type="button">HTML+CSS</button><button class="btn btn-outline" type="button">Linux</button><button class="btn btn-outline" type="button">Laravel</button><button class="btn btn-outline" type="button">Git</button><button class="btn btn-outline" type="button">RESTful</button><button class="btn btn-outline" type="button">Vue</button><button class="btn btn-outline" type="button">Vagrant</button><button class="btn btn-outline" type="button">Meteor</button><button class="btn btn-outline" type="button">Gulp</button><button class="btn btn-outline" type="button">Scss</button><button class="btn btn-outline" type="button">Bower</button><button class="btn btn-outline" type="button">Yeoman</button><button class="btn btn-outline" type="button">Webpack</button>
+<button class="btn btn-outline" type="button">PHP</button><button class="btn btn-outline" type="button">Javascript</button><button class="btn btn-outline" type="button">Jquery</button><button class="btn btn-outline" type="button">Underscore</button><button class="btn btn-outline" type="button">Vim</button><button class="btn btn-outline" type="button">Backbone</button><button class="btn btn-outline" type="button">HTML+CSS</button><button class="btn btn-outline" type="button">Linux</button><button class="btn btn-outline" type="button">Laravel</button><button class="btn btn-outline" type="button">Git</button><button class="btn btn-outline" type="button">RESTful</button><button class="btn btn-outline" type="button">Vue</button><button class="btn btn-outline" type="button">Vagrant</button><button class="btn btn-outline" type="button">Meteor</button><button class="btn btn-outline" type="button">Gulp</button><button class="btn btn-outline" type="button">Scss</button><button class="btn btn-outline" type="button">Bower</button><button class="btn btn-outline" type="button">Yeoman</button><button class="btn btn-outline" type="button">Webpack</button>
 </div>
 
 ### 综合技能
@@ -34,5 +34,4 @@ skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful, S
 | jquery | ★★★☆☆ |
 | underscore | ★★★☆☆ |
 | backbone | ★★★☆☆ |
-| javascript | ★★★☆☆ |
 | Linux | ★★★☆☆ |
