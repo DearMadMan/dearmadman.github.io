@@ -3,40 +3,49 @@
 <head>
   <meta charset="utf-8">
   
-  <title>run ngrok on your own server | dearmadman-王奇的博客</title>
+  <title>useful nodejs libaries | dearmadman-王奇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="run ngrok on your own serverdependencies
-git &amp;gt;= 1.7.9.5
-golang
-mercurial
-code.google.cominstall golang
-
-1yum install golang
-update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
+  <meta name="description" content="useful nodejs libariesexpress
+superagent
+cheerio
+eventproxy
+async
+mocha
+should
+expect
+chajs
+phantomjs
+istanbul">
 <meta property="og:type" content="article">
-<meta property="og:title" content="run ngrok on your own server">
-<meta property="og:url" content="http://dearmadman.com/2015/09/19/run-ngrok-on-your-own-server/index.html">
+<meta property="og:title" content="useful nodejs libaries">
+<meta property="og:url" content="http://dearmadman.com/2016/02/01/useful-nodejs-libaries/index.html">
 <meta property="og:site_name" content="dearmadman-王奇的博客">
-<meta property="og:description" content="run ngrok on your own serverdependencies
-git &amp;gt;= 1.7.9.5
-golang
-mercurial
-code.google.cominstall golang
-
-1yum install golang
-update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
-<meta property="og:image" content="http://dearmadman.com/images/s19.jpg">
-<meta property="og:updated_time" content="2015-09-21T02:12:10.000Z">
+<meta property="og:description" content="useful nodejs libariesexpress
+superagent
+cheerio
+eventproxy
+async
+mocha
+should
+expect
+chajs
+phantomjs
+istanbul">
+<meta property="og:image" content="http://dearmadman.com/images/s41.jpg">
+<meta property="og:updated_time" content="2016-02-01T07:05:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="run ngrok on your own server">
-<meta name="twitter:description" content="run ngrok on your own serverdependencies
-git &amp;gt;= 1.7.9.5
-golang
-mercurial
-code.google.cominstall golang
-
-1yum install golang
-update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
+<meta name="twitter:title" content="useful nodejs libaries">
+<meta name="twitter:description" content="useful nodejs libariesexpress
+superagent
+cheerio
+eventproxy
+async
+mocha
+should
+expect
+chajs
+phantomjs
+istanbul">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -108,11 +117,11 @@ update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><a class="page-title-link" href="/categories/linux/">linux</a></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/javascript/">javascript</a><i class="icon" id="icon-angle-right"></i><a class="page-title-link" href="/categories/javascript/nodejs/">nodejs</a></h1>
             </div>
             <div class="main-body-content">
               
-  <article id="post-run-ngrok-on-your-own-server" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-useful-nodejs-libaries" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -120,40 +129,40 @@ update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
           
   
     <h1 class="article-title" itemprop="name">
-      run ngrok on your own server
+      useful nodejs libaries
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2015/09/19/run-ngrok-on-your-own-server/" class="article-date">
-  <time datetime="2015-09-19T08:28:48.000Z" itemprop="datePublished">2015-09-19</time>
+        <a href="/2016/02/01/useful-nodejs-libaries/" class="article-date">
+  <time datetime="2016-02-01T04:50:28.000Z" itemprop="datePublished">2016-02-01</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="/images/s19.jpg" alt=""></p>
-<h1 id="run_ngrok_on_your_own_server">run ngrok on your own server</h1><h2 id="dependencies">dependencies</h2><ul>
-<li>git &gt;= 1.7.9.5</li>
-<li>golang</li>
-<li>mercurial</li>
-<li>code.google.com<h2 id="install_golang">install golang</h2></li>
-</ul>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> golang</span><br></pre></td></tr></table></figure>
-<h2 id="update_git">update git</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="comment">--import http://apt.sw.be/RPM-GPG-KEY.dag.txt  </span></span><br><span class="line"># http://pkgs.repoforge.org/rpmforge-<span class="operator"><span class="keyword">release</span>/ </span><br><span class="line"># <span class="keyword">Select</span> the appropriate <span class="keyword">with</span> your <span class="keyword">system</span></span><br><span class="line">rpm -<span class="keyword">i</span> <span class="keyword">http</span>://pkgs.repoforge.org/rpmforge-<span class="keyword">release</span>/rpmforge-<span class="keyword">release</span>-<span class="number">0.5</span><span class="number">.3</span>-<span class="number">1.</span>el6.rf.i686.rpm  </span><br><span class="line">yum <span class="comment">--enablerepo=rpmforge-extras update  </span></span><br><span class="line">yum <span class="comment">--enablerepo=rpmforge-extras install git</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="install_mercurial">install mercurial</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> mercurial</span><br></pre></td></tr></table></figure>
-<h2 id="install_ngrok">install ngrok</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/inconshreveable/ngrok.git</span><br><span class="line"><span class="built_in">export</span> GOPATH=/usr/<span class="built_in">local</span>/src/ngrok/</span><br><span class="line"><span class="built_in">export</span> NGROK_DOMAIN=<span class="string">"dearmadman.com"</span></span><br></pre></td></tr></table></figure>
-<h2 id="generater_ssl_certificate">generater ssl certificate</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cd ngrok</span><br><span class="line">openssl genrsa -out rootCA<span class="class">.key</span> <span class="number">2048</span></span><br><span class="line">openssl req -x509 -new -nodes -key rootCA<span class="class">.key</span> -subj <span class="string">"/CN=$NGROK_DOMAIN"</span> -days <span class="number">5000</span> -out rootCA<span class="class">.pem</span></span><br><span class="line">openssl genrsa -out device<span class="class">.key</span> <span class="number">2048</span></span><br><span class="line">openssl req -new -key device<span class="class">.key</span> -subj <span class="string">"/CN=$NGROK_DOMAIN"</span> -out device<span class="class">.csr</span></span><br><span class="line">openssl x509 -req -<span class="keyword">in</span> device<span class="class">.csr</span> -CA rootCA<span class="class">.pem</span> -CAkey rootCA<span class="class">.key</span> -CAcreateserial -out device<span class="class">.crt</span> -days <span class="number">5000</span></span><br><span class="line">cp rootCA<span class="class">.pem</span> assets/client/tls/ngrokroot<span class="class">.crt</span></span><br><span class="line">cp device<span class="class">.crt</span> assets/server/tls/snakeoil<span class="class">.crt</span> </span><br><span class="line">cp device<span class="class">.key</span> assets/server/tls/snakeoil<span class="class">.key</span></span><br><span class="line">GOOS=linux GOARCH=<span class="number">386</span></span><br><span class="line">make clean</span><br><span class="line">make release-server release-client</span><br></pre></td></tr></table></figure>
-<h2 id="run_server">run server</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bin/ngrokd </span>-domain=<span class="string">"$NGROK_DOMAIN"</span> -httpAddr=<span class="string">":8000"</span></span><br></pre></td></tr></table></figure>
-<h2 id="need">need</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#copy</span> your ngork client to your client system</span><br><span class="line"></span><br><span class="line">scp root@xxx<span class="class">.xxx</span><span class="class">.xxx</span><span class="class">.xxx</span> /usr/local/src/ngrok/bin/ngrok  /usr/bin/</span><br></pre></td></tr></table></figure>
-<h2 id="client">client</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">server_addr:</span> <span class="string">"dearmadman.com:4443"</span></span><br><span class="line"><span class="string">trust_host_root_certs:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+        <p><img src="/images/s41.jpg" alt=""></p>
+<h1 id="useful_nodejs_libaries">useful nodejs libaries</h1><p><a href="http://expressjs.com/" target="_blank" rel="external">express</a></p>
+<p><a href="https://github.com/visionmedia/superagent" target="_blank" rel="external">superagent</a></p>
+<p><a href="https://github.com/cheeriojs/cheerio" target="_blank" rel="external">cheerio</a></p>
+<p><a href="https://github.com/JacksonTian/eventproxy" target="_blank" rel="external">eventproxy</a></p>
+<p><a href="https://github.com/caolan/async" target="_blank" rel="external">async</a></p>
+<p><a href="http://mochajs.org/" target="_blank" rel="external">mocha</a></p>
+<p><a href="https://github.com/tj/should.js" target="_blank" rel="external">should</a></p>
+<p><a href="https://github.com/Automattic/expect.js" target="_blank" rel="external">expect</a></p>
+<p><a href="http://chaijs.com/" target="_blank" rel="external">chajs</a></p>
+<p><a href="http://phantomjs.org/" target="_blank" rel="external">phantomjs</a></p>
+<p><a href="https://github.com/gotwarlost/istanbul" target="_blank" rel="external">istanbul</a></p>
+
       </div>
       <footer class="article-footer">
-        <a data-url="http://dearmadman.com/2015/09/19/run-ngrok-on-your-own-server/" data-id="cik3muarc0017au933s0c4zek" class="article-share-link">Share</a>
+        <a data-url="http://dearmadman.com/2016/02/01/useful-nodejs-libaries/" data-id="cik3muaqp0007au932txu4ba5" class="article-share-link">Share</a>
         
-          <a href="http://dearmadman.com/2015/09/19/run-ngrok-on-your-own-server/#comments" class="article-comment-link">Comments</a>
+          <a href="http://dearmadman.com/2016/02/01/useful-nodejs-libaries/#comments" class="article-comment-link">Comments</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -181,20 +190,10 @@ update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
     
 <nav id="article-nav">
   
-    <a href="/2015/09/21/ajax-long-poll-sockets/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">newer</strong>
-      <p class="article-nav-title">
-        
-          ajax long poll sockets
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2015/09/16/margin-top-meger/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/01/30/php-exec-debug/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">older</strong>
-      <p class="article-nav-title">css盒模型 垂直方向magin合并问题</p>
+      <p class="article-nav-title">php exec debug</p>
       <i class="icon" id="icon-chevron-left"></i>
     </a>
   
@@ -394,7 +393,7 @@ update git123456rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt  # http">
 <script>
   var disqus_shortname = 'dearmadman';
   
-  var disqus_url = 'http://dearmadman.com/2015/09/19/run-ngrok-on-your-own-server/';
+  var disqus_url = 'http://dearmadman.com/2016/02/01/useful-nodejs-libaries/';
   
   (function(){
     var dsq = document.createElement('script');
