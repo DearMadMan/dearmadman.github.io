@@ -32,6 +32,8 @@ tags: [other]
 
 [iiiyu](http://iiiyu.com/)
 
+[yuguo](https://yuguo.us)
+
 [lvoyee](http://www.lvoyee.com/)
 
 [luopq](http://luopq.com/)
@@ -45,6 +47,22 @@ tags: [other]
 [mzkmzk](https://mzkmzk.gitbooks.io/read/content/)
 
 [epubit](http://www.epubit.com.cn/)
+
+[jikey](http://www.cnblogs.com/jikey/)
+
+[shenyisyn](http://www.cnblogs.com/shenyisyn/)
+
+[fens](http://blog.fens.me/)
+
+[iwan0](http://www.iwan0.com/)
+
+[jinlong](http://jinlong.github.io/)
+
+[alloyteam](http://www.alloyteam.com/)
+
+[hustlzp](http://hustlzp.com/)
+
+[phodal](http://phodal.com/)
 
 # Learn Tags
 

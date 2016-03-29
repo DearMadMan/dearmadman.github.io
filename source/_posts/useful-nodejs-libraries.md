@@ -1,11 +1,11 @@
-title: useful nodejs libaries
+title: useful nodejs libraries
 date: 2016-02-01 12:50:28
 categories: [javascript, nodejs]
 tags: nodejs
 ---
 ![](/images/s41.jpg)
 
-# useful nodejs libaries
+# useful nodejs libraries
 
 [express](http://expressjs.com/)
 
