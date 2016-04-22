@@ -64,6 +64,17 @@ tags: [other]
 
 [phodal](http://phodal.com/)
 
+[scotch](https://scotch.io/tutorials)
+
+
+# php 
+
+[insp](https://www.insp.top/)
+
+[taylorotwell](http://taylorotwell.com/)
+
+[huoding](http://huoding.com/)
+
 # Learn Tags
 
 [Gulp](http://www.w3cplus.com/blog/tags/528.html)

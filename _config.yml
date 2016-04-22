@@ -91,7 +91,8 @@ menu:
   # Delete this row if you don't want categories in your header nav bar
   Categories: 
   github: https://github.com/dearmadman
-  About: /about
+  about: /about
+  team: http://team.dearmadman.com
 
 # Article list grouped by year 
 groupByYear: true
